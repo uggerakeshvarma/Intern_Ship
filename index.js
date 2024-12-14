@@ -68,9 +68,6 @@ app.get('/Login', (req, res) => {
 app.get('/Dashboard', checkAuth, (req, res) => {
     res.render('Dashboard')
 })
-app.get('/', async (req, res) => {
-    res.render('Hii')
-})
 
 
 //Register
@@ -139,4 +136,9 @@ app.post('/logout' ,(req, res) => (
 
 app.listen(Port, () => {
     console.log(`seccsess ${Port}`)
+})
+
+
+app.use('/',  (req, res) => {
+res.send("<h1>Well Come My </h1>")
 })
