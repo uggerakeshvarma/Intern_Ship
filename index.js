@@ -68,7 +68,9 @@ app.get('/Login', (req, res) => {
 app.get('/Dashboard', checkAuth, (req, res) => {
     res.render('Dashboard')
 })
-
+app.get('/', async (req, res) => {
+    res.render('Hii')
+})
 
 
 //Register
